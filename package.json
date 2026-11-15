@@ -1,0 +1,82 @@
+{
+  "name": "notepad-everywhere",
+  "private": true,
+  "version": "0.2.0",
+  "description": "Anotações hierárquicas, glossário vivo e repetição espaçada",
+  "author": "Notepad Everywhere",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shanksyko/notepad-everywhere.git"
+  },
+  "type": "module",
+  "main": "electron/main.cjs",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "typecheck": "tsc --noEmit",
+    "preview": "vite preview",
+    "app": "vite build && electron .",
+    "dist": "vite build && electron-builder --win",
+    "test": "node tests/e2e.mjs"
+  },
+  "build": {
+    "appId": "local.notepad.everywhere",
+    "productName": "Notepad Everywhere",
+    "files": [
+      "dist/**",
+      "electron/**"
+    ],
+    "publish": {
+      "provider": "github",
+      "owner": "shanksyko",
+      "repo": "notepad-everywhere"
+    },
+    "directories": {
+      "output": "release"
+    },
+    "win": {
+      "target": [
+        "nsis"
+      ]
+    },
+    "nsis": {
+      "oneClick": true,
+      "perMachine": false,
+      "createDesktopShortcut": true,
+      "shortcutName": "Notepad Everywhere"
+    }
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.5",
+    "@tiptap/extension-code-block-lowlight": "^3.34.0",
+    "@tiptap/extension-list": "^3.34.0",
+    "@tiptap/extension-table": "^3.34.0",
+    "@tiptap/extension-text-style": "^3.34.0",
+    "@tiptap/extensions": "^3.34.0",
+    "@tiptap/pm": "^3.34.0",
+    "@tiptap/react": "^3.34.0",
+    "@tiptap/starter-kit": "^3.34.0",
+    "@types/katex": "^0.16.8",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.3.0",
+    "dexie": "^4.4.7",
+    "electron": "^45.3.2",
+    "electron-builder": "^26.18.0",
+    "jszip": "^3.10.2",
+    "katex": "^0.19.1",
+    "lowlight": "^3.3.0",
+    "lucide-react": "^1.72.0",
+    "pdfjs-dist": "^6.5.438",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "tailwindcss": "^4.3.5",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.8",
+    "zustand": "^5.1.0"
+  },
+  "dependencies": {
+    "electron-updater": "^6.8.11"
+  }
+}

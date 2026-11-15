@@ -1,0 +1,13 @@
+node_modules/
+dist/
+release/
+*.log
+*.tsbuildinfo
+.DS_Store
+Thumbs.db
+
+# configuração local de ferramentas
+.claude/
+
+# imagem original do ícone (o que o build usa é build/icon.png e build/icon.ico)
+build/*.webp
