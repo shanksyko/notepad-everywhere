@@ -41,6 +41,7 @@
       ]
     },
     "nsis": {
+      "artifactName": "Notepad-Everywhere-Setup-${version}.${ext}",
       "oneClick": true,
       "perMachine": false,
       "createDesktopShortcut": true,

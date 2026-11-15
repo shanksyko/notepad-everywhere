@@ -19,7 +19,7 @@ Bloco de notas em árvore para estudar, com glossário vivo, repetição espaça
 
 ## Instalar
 
-Baixe o instalador `Notepad Everywhere Setup x.y.z.exe` na página de Releases e execute. Ele instala só para o seu usuário, sem pedir administrador.
+Baixe o instalador `Notepad-Everywhere-Setup-x.y.z.exe` na página de [Releases](https://github.com/shanksyko/notepad-everywhere/releases) e execute. Ele instala só para o seu usuário, sem pedir administrador.
 
 O instalador não é assinado: na primeira execução o Windows SmartScreen mostra um aviso. Clique em **Mais informações → Executar assim mesmo**.
 

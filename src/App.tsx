@@ -301,7 +301,7 @@ async function checkUpdates() {
     ready: `A versão ${r.version} está pronta para instalar.`,
     unconfigured: `Versão ${cfg.version}. A atualização automática ainda não foi ligada a um repositório do GitHub.`,
     unavailable: r.message || 'Atualização indisponível neste ambiente.',
-    error: 'Não foi possível procurar atualizações: ' + r.message,
+    error: /No published versions/i.test(r.message) ? `Versão ${cfg.version}. Ainda não há nenhuma versão publicada no GitHub.` : 'Não foi possível procurar atualizações: ' + r.message,
     idle: `Versão ${cfg.version}.`,
   }
   toast(msg[r.status] || `Versão ${cfg.version}.`)
